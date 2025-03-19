@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Overview of the aims, learning outcomes, and assessments of the COS10026 Web Technology Project unit.">
+        <meta name="keywords" content="web, technology, html">
+        <meta name="author" content="Declan">
+        <title>forms</title>
+    </head>
+    <body>
+        <a href="https://swin.edu.au">
+            <img src="img/logo.png" width="100px">
+        </a>
+
+        <h1>CWA Help Desk Appointment</h1>
+
+        <p>
+            The Help Desk is located at ATC620. Open 10:30 to 19:00 Monday to Friday<br><br>
+            Check Blackboard for when CWA tutors will be there.
+        </p>
+
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST">
+            <!-- student details -->
+            <fieldset>
+                <legend>Student details</legend><br>
+                <!-- student id -->
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id"><br><br>
+                <!-- given name -->
+                <label for="first-name">Given Name</label>
+                <input type="text" id="first-name" name="first-name" maxlength="15">
+                <!-- family name -->
+                <label for="last-name">Family Name</label>
+                <input type="text" id="last-name" name="last-name" maxlength="15"><br><br>
+            </fieldset>
+
+            <fieldset>
+                <!-- unit -->
+                <legend>Your unit</legend>
+                <input type="radio" id="cos10011" name="unit" value="cos10011">
+                <label for="cos10011">COS10011</label>
+                <input type="radio" id="cos60004" name="unit" value="cos60004">
+                <label for="cos10011">COS60004</label>
+                <input type="radio" id="cos60007" name="unit" value="cos60007">
+                <label for="cos10011">COS60007</label><br><br>
+                <!-- tutor -->
+                <label for="tutor">Your Tutor</label>
+                <select name="tutor" id="tutor">
+                    <option>Please Select</option>
+                    <option value="option 1">option 1</option>
+                    <option value="option 2">option 2</option>
+                    <option value="option 3">option 3</option>
+                    <option value="option 4">option 4</option>
+                </select>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <!-- issue -->
+                <legend>Issue</legend>
+                <!-- category -->
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="category[]" checked="checked"> 
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="category[]"> 
+                <label for="js">JavaScript</label>
+                <input type="checkbox" id="js" name="category[]">
+                <label for="php">PHP</label>
+                <input type="checkbox" id="php" name="category[]">
+                <label for="mysql">MySQL</label>
+                <input type="checkbox" id="mysql" name="category[]">
+                <br><br>
+                <!-- description -->
+                <label for="desc">Description of Issue</label><br>
+                <input type="text" id="desc" name="desc" placeholder="Write description of your problem here...">
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Date/Time</legend>
+                <!-- date/time -->
+                 <label for="date">Date</label>
+                 <input type="text" id="date" name="date" placeholder="dd/mm/yyyy"><br>
+                 <label for="time">Time</label>
+                 <input type="text" id="time" name="time" placeholder="00:00">
+            </fieldset>
+
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset Form">
+         </form>
+    </body>
+</html>
